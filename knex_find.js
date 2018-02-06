@@ -19,10 +19,11 @@ const knex = require("knex")({
 
 
   knex.select().from('famous_people')
-  .where('first_name', '=', 'Abraham')
+  // .where('first_name', '=', 'Abraham')
   .asCallback(function(err, rows) {
     if (err) {
        console.log("knex error");
+
        return
     }
     console.log("rows", rows);
